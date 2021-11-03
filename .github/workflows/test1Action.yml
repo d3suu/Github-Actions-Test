@@ -1,0 +1,17 @@
+name: C build test action
+
+# modified, base version from https://www.incredibuild.com/blog/using-github-actions-with-your-c-project
+
+on:
+  push:
+      branches: [ C_build_test ]
+  pull_request:
+      branches: [ C_build_test ]
+
+jobs:
+  build-and-test:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: make
+      run: make
