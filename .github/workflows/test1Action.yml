@@ -1,6 +1,7 @@
 name: C build test action
 
 # modified, base version from https://www.incredibuild.com/blog/using-github-actions-with-your-c-project
+# archive https://web.archive.org/web/20211103222003/https://www.incredibuild.com/blog/using-github-actions-with-your-c-project
 
 on:
   push:
@@ -14,4 +15,4 @@ jobs:
       steps:
       - uses: actions/checkout@v2
       - name: make
-      run: make
+        run: make
