@@ -8,6 +8,12 @@ on:
       branches: [ C_build_test ]
   pull_request:
       branches: [ C_build_test ]
+  workflow_dispatch:
+      inputs:
+      # Trigger workflow by hand
+          logLevel:
+              description: 'Log level'
+              default: 'none'
 
 jobs:
   build-and-test:
